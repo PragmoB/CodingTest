@@ -2,9 +2,13 @@
 //
 
 #include <iostream>
+#include <cstring>
 
 uint32_t N, M;
 uint32_t** place;
+uint32_t island_num = 2;
+uint32_t bridge_connections[30][2];
+uint32_t len_bridge_connections;
 
 using namespace std;
 
@@ -18,60 +22,168 @@ uint32_t bridge(uint32_t target1, uint32_t target2)
 			if (place[i][j] == target1)
 			{
 				// 왼쪽으로 탐색
-				for (uint32_t k = 1; 0 <= (signed)j - k; k++)
+				for (uint32_t k = 1; 0 <= (signed)(j - k); k++)
 				{
-					if (place[i][j - k] == target1) // 출발지가 막고 있으면 
-						break;
-					else if (place[i][j - k] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
+					if (place[i][j - k] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
 					{
 						if (k - 1 < min)
 							min = k - 1;
 
 						break;
 					}
+					if (place[i][j - k] != 0) // 바다가 아니라면(무언가 막고 있다면)
+						break;
 				}
 				// 오른쪽으로 탐색
 				for (uint32_t k = 1; j + k < M; k++)
 				{
-					if (place[i][j + k] == target1) // 출발지가 막고 있으면 
-						break;
-					else if (place[i][j + k] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
+					if (place[i][j + k] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
 					{
 						if (k - 1 < min)
 							min = k - 1;
 
 						break;
 					}
+					if (place[i][j + k] != 0) // 바다가 아니라면(무언가 막고 있다면)
+						break;
 				}
-				// 아래쪽으로 탐색
-				for (uint32_t k = 1; 0 <= (signed)i - k; k++)
+				// 위쪽으로 탐색
+				for (uint32_t k = 1; 0 <= (signed)(i - k); k++)
 				{
-					if (place[i - k][j] == target1) // 출발지가 막고 있으면 
-						break;
-					else if (place[i - k][j] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
+					if (place[i - k][j] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
 					{
 						if (k - 1 < min)
 							min = k - 1;
 
 						break;
 					}
+					if (place[i - k][j] != 0) // 바다가 아니라면(무언가 막고 있다면)
+						break;
 				}
 				// 아래쪽으로 탐색
 				for (uint32_t k = 1; i + k < N; k++)
 				{
-					if (place[i + k][j] == target1) // 출발지가 막고 있으면 
-						break;
-					else if (place[i + k][j] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
+					if (place[i + k][j] == target2 && 2 < k) // 목적지에 도달했고 거리가 2이상이라면
 					{
 						if (k - 1 < min)
 							min = k - 1;
 
 						break;
 					}
+					if (place[i + k][j] != 0) // 바다가 아니라면(무언가 막고 있다면) 
+						break;
 				}
 			}
 
 	return min;
+}
+
+uint32_t dfs(uint32_t num, uint32_t depth = 0, uint32_t next = 0)
+{
+	static uint32_t order[30];
+	static uint32_t min;
+
+	if (depth == 0)
+		min = -1;
+
+	// 연결 조합이 완성됐으면
+	if (depth == num)
+	{
+		/* 연결성 검증 */
+		uint32_t island_group[10];
+		memset(island_group, -1, sizeof(uint32_t) * 10);
+		island_group[0] = bridge_connections[order[0]][0];
+		island_group[1] = bridge_connections[order[0]][1];
+		uint32_t island_group_len = 2;
+		for (uint32_t i = 0; i < island_group_len; i++)
+		{
+			for (uint32_t j = 0; j < num; j++)
+			{
+				uint32_t island = NULL;
+
+				if (bridge_connections[order[j]][0] == island_group[i])
+					island = bridge_connections[order[j]][1];
+				else if (bridge_connections[order[j]][1] == island_group[i])
+					island = bridge_connections[order[j]][0];
+
+				// 연결성 그룹에 추가하기 전 중복검사
+				uint32_t k;
+				for (k = 0; k < island_group_len && island != NULL; k++)
+					if (island == island_group[k])
+						break;
+
+				if (k == island_group_len)
+					island_group[island_group_len++] = island;
+			}
+		}
+
+		// 현 시점에서 하나로 연결된 섬들의 목록이 island_group에 저장됨
+
+		// island_group에 모든 섬들이 포함됬는지 검사
+		for (uint32_t i = 1; i <= island_num; i++)
+		{
+			uint32_t j;
+			for (j = 0; j < island_group_len; j++)
+				if (i == island_group[j])
+					break;
+
+			if (j == island_group_len) // 포함 안됐으면
+				return min; // 종료
+		}
+
+		/* debug
+		cout << endl;
+		for (uint32_t i = 0; i < num; i++)
+		{
+			cout << bridge_connections[order[i]][0] << ' ' << bridge_connections[order[i]][1] << endl;
+		}
+		cout << endl;
+		for (uint32_t i = 0; i < island_group_len; i++)
+		{
+			cout << island_group[i] << ' ';
+		}
+		cout << endl; // */
+
+		// 계산 시작
+		uint32_t result = 0;
+		for (uint32_t i = 0; i < num; i++)
+			result += bridge(bridge_connections[order[i]][0], bridge_connections[order[i]][1]);
+
+		if (result < min)
+			min = result;
+
+		return min;
+	}
+
+	for (uint32_t i = next; i < len_bridge_connections; i++)
+	{
+		order[depth] = i;
+		dfs(num, depth + 1, i + 1);
+	}
+	return min;
+}
+
+// 두가지의 섬을 연결하는 모든 경우를 bridge_connections에 때려넣음
+void makeCombination(uint32_t depth = 0, uint32_t next = 1)
+{
+	static uint32_t order[2];
+
+	if (depth == 0)
+		len_bridge_connections = 0;
+
+	if (depth == 2)
+	{
+		if (bridge(order[0], order[1]) == -1)
+			return;
+
+		bridge_connections[len_bridge_connections][0] = order[0];
+		bridge_connections[len_bridge_connections++][1] = order[1];
+	}
+	for (uint32_t i = next; i <= island_num; i++)
+	{
+		order[depth] = i;
+		makeCombination(depth + 1, i + 1);
+	}
 }
 
 // (x, y)위치의 섬 전체를 상하좌우로 탐색하며 num으로 덮음
@@ -105,36 +217,27 @@ int main()
 	{
 		place[i] = new uint32_t[M + 1];
 		for (uint32_t j = 0; j < M; j++)
-		{
 			cin >> place[i][j];
-		}
 	}
 
 	// 섬마다 번호를 다르게함
-	uint32_t island_num = 2;
 	for (uint32_t i = 0; i < N; i++)
-	{
 		for (uint32_t j = 0; j < M; j++)
-		{
 			if (place[i][j] == 1)
-			{
 				numerate(j, i, island_num++);
-			}
-		}
-	}
+
+	island_num -= 2;
 
 	// 섬 번호가 2부터 시작했으므로 1부터 시작하게 바꿔줌
 	for (uint32_t i = 0; i < N; i++)
-	{
 		for (uint32_t j = 0; j < M; j++)
-		{
 			if (place[i][j] != 0)
-			{
 				place[i][j]--;
-			}
-		}
-	}
 
+	makeCombination();
+	
+	/* debug
+	cout << endl;
 	for (uint32_t i = 0; i < N; i++)
 	{
 		for (uint32_t j = 0; j < M; j++)
@@ -143,6 +246,22 @@ int main()
 		}
 		cout << endl;
 	}
+	cout << endl;
+
+	cout << endl;
+	for (uint32_t i = 0; i < len_bridge_connections; i++)
+		cout << bridge_connections[i][0] << ' ' << bridge_connections[i][1] << endl;
+	cout << endl; // */
+	
+	uint32_t min = -1;
+	for (uint32_t i = 1; i <= len_bridge_connections; i++)
+	{
+		uint32_t result = dfs(i);
+		if (result < min)
+			min = result;
+	}
+
+	cout << (signed)min;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
