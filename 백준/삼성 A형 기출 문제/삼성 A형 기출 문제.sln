@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "게리멘더링", "게리�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "다리 만들기2", "다리 만들기2\다리 만들기2.vcxproj", "{176F1087-793D-4764-B6DA-CCDB97B86DFF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "괄호 추가하기", "괄호 추가하기\괄호 추가하기.vcxproj", "{972813C4-531E-45F9-BC0A-2539184E9113}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{176F1087-793D-4764-B6DA-CCDB97B86DFF}.Release|x64.Build.0 = Release|x64
 		{176F1087-793D-4764-B6DA-CCDB97B86DFF}.Release|x86.ActiveCfg = Release|Win32
 		{176F1087-793D-4764-B6DA-CCDB97B86DFF}.Release|x86.Build.0 = Release|Win32
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Debug|x64.ActiveCfg = Debug|x64
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Debug|x64.Build.0 = Debug|x64
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Debug|x86.ActiveCfg = Debug|Win32
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Debug|x86.Build.0 = Debug|Win32
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Release|x64.ActiveCfg = Release|x64
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Release|x64.Build.0 = Release|x64
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Release|x86.ActiveCfg = Release|Win32
+		{972813C4-531E-45F9-BC0A-2539184E9113}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
