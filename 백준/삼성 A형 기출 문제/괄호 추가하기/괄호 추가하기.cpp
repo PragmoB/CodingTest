@@ -59,8 +59,13 @@ int main()
 	cin >> N;
 	operation = new char[N + 1];
 	cin >> operation;
-
-	cout << dfs();
+	if (N == 1)
+		cout << operation[0];
+	else
+		cout << dfs();
+	
+	delete[] operation;
+	return 0;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
