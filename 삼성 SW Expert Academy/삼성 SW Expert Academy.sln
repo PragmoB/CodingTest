@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1738
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "프로세서 연결하기", "프로세서 연결하기\프로세서 연결하기.vcxproj", "{78719845-C128-4255-A327-4B4093F514EA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "합성수 방정식", "합성수 방정식\합성수 방정식.vcxproj", "{65FA0788-2CAC-4D1A-9641-A7FE47E67362}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{78719845-C128-4255-A327-4B4093F514EA}.Release|x64.Build.0 = Release|x64
 		{78719845-C128-4255-A327-4B4093F514EA}.Release|x86.ActiveCfg = Release|Win32
 		{78719845-C128-4255-A327-4B4093F514EA}.Release|x86.Build.0 = Release|Win32
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Debug|x64.ActiveCfg = Debug|x64
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Debug|x64.Build.0 = Debug|x64
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Debug|x86.ActiveCfg = Debug|Win32
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Debug|x86.Build.0 = Debug|Win32
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Release|x64.ActiveCfg = Release|x64
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Release|x64.Build.0 = Release|x64
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Release|x86.ActiveCfg = Release|Win32
+		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
