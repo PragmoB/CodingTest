@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="화면 캡처.cpp">
+    <ClCompile Include="화면 캡쳐.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

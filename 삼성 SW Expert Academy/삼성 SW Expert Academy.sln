@@ -7,7 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "프로세서 연결하기",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "합성수 방정식", "합성수 방정식\합성수 방정식.vcxproj", "{65FA0788-2CAC-4D1A-9641-A7FE47E67362}"
 EndProject
+<<<<<<< HEAD
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "화면 캡처", "화면 캡처\화면 캡처.vcxproj", "{E06969B1-E8F0-4976-BAD2-FF44A9AE5E04}"
+=======
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "화면 캡쳐", "화면 캡쳐\화면 캡쳐.vcxproj", "{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}"
+>>>>>>> d80f269a2dedb7ab853221658dfca72e2d4a617d
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,7 @@ Global
 		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Release|x64.Build.0 = Release|x64
 		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Release|x86.ActiveCfg = Release|Win32
 		{65FA0788-2CAC-4D1A-9641-A7FE47E67362}.Release|x86.Build.0 = Release|Win32
+<<<<<<< HEAD
 		{E06969B1-E8F0-4976-BAD2-FF44A9AE5E04}.Debug|x64.ActiveCfg = Debug|x64
 		{E06969B1-E8F0-4976-BAD2-FF44A9AE5E04}.Debug|x64.Build.0 = Debug|x64
 		{E06969B1-E8F0-4976-BAD2-FF44A9AE5E04}.Debug|x86.ActiveCfg = Debug|Win32
@@ -41,6 +46,16 @@ Global
 		{E06969B1-E8F0-4976-BAD2-FF44A9AE5E04}.Release|x64.Build.0 = Release|x64
 		{E06969B1-E8F0-4976-BAD2-FF44A9AE5E04}.Release|x86.ActiveCfg = Release|Win32
 		{E06969B1-E8F0-4976-BAD2-FF44A9AE5E04}.Release|x86.Build.0 = Release|Win32
+=======
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Debug|x64.ActiveCfg = Debug|x64
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Debug|x64.Build.0 = Debug|x64
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Debug|x86.ActiveCfg = Debug|Win32
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Debug|x86.Build.0 = Debug|Win32
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Release|x64.ActiveCfg = Release|x64
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Release|x64.Build.0 = Release|x64
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Release|x86.ActiveCfg = Release|Win32
+		{580A601D-4EEE-4FCF-A517-9BF06C1BF5FC}.Release|x86.Build.0 = Release|Win32
+>>>>>>> d80f269a2dedb7ab853221658dfca72e2d4a617d
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
