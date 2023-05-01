@@ -20,17 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-<<<<<<< HEAD
-    <ProjectGuid>{8F579991-A1EA-4409-BB4F-37D16AB8FAEF}</ProjectGuid>
+    <ProjectGuid>{0CDD7EA6-544F-460B-830D-D9EE426F5417}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>줄세우기</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-=======
-    <ProjectGuid>{20E4AF0D-5FF9-4594-B9D1-903606610551}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <RootNamespace>줄세우기</RootNamespace>
+    <RootNamespace>암호코드복붙</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
->>>>>>> d98bcb49282253be65bbf892abe603e15806ec83
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -158,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="줄세우기.cpp" />
+    <ClCompile Include="암호코드_복붙.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
