@@ -8,31 +8,13 @@ using namespace std;
 int main()
 {
 	uint32_t N;
-<<<<<<< HEAD
-	uint32_t input[200];
-=======
 	uint32_t input[200], dp[200]; // dp[A] = B A번째 값을 마지막으로 하는 가장 긴 부분수열의 길이는 B이다
->>>>>>> d98bcb49282253be65bbf892abe603e15806ec83
 	
 	cin >> N;
 	
 	for (uint32_t i = 0; i < N; i++)
 		cin >> input[i];
 
-<<<<<<< HEAD
-	uint32_t current_max = 0, result = 0;
-
-	for (uint32_t i = 0; i < N; i++)
-	{
-		if (current_max < input[i])
-			current_max = input[i];
-		else
-			result++;
-	}
-
-	cout << result;
-}
-=======
 	dp[0] = 1;
 
 	uint32_t max = 0;
@@ -50,4 +32,3 @@ int main()
 
 	cout << N - max << endl;
 }
->>>>>>> d98bcb49282253be65bbf892abe603e15806ec83
