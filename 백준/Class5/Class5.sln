@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "숫자 나누기 게임", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCS 2", "LCS 2\LCS 2.vcxproj", "{27ABDB97-E714-4000-9F49-9D29BCE38DE6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "줄 세우기", "줄 세우기\줄 세우기.vcxproj", "{6FD34034-612E-466A-B2F6-E9686DA1B5F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{27ABDB97-E714-4000-9F49-9D29BCE38DE6}.Release|x64.Build.0 = Release|x64
 		{27ABDB97-E714-4000-9F49-9D29BCE38DE6}.Release|x86.ActiveCfg = Release|Win32
 		{27ABDB97-E714-4000-9F49-9D29BCE38DE6}.Release|x86.Build.0 = Release|Win32
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Debug|x64.ActiveCfg = Debug|x64
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Debug|x64.Build.0 = Debug|x64
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Debug|x86.ActiveCfg = Debug|Win32
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Debug|x86.Build.0 = Debug|Win32
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Release|x64.ActiveCfg = Release|x64
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Release|x64.Build.0 = Release|x64
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Release|x86.ActiveCfg = Release|Win32
+		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
