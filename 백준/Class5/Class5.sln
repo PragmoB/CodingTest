@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCS 2", "LCS 2\LCS 2.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "줄 세우기", "줄 세우기\줄 세우기.vcxproj", "{6FD34034-612E-466A-B2F6-E9686DA1B5F7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "세 용액", "세 용액\세 용액.vcxproj", "{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Release|x64.Build.0 = Release|x64
 		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Release|x86.ActiveCfg = Release|Win32
 		{6FD34034-612E-466A-B2F6-E9686DA1B5F7}.Release|x86.Build.0 = Release|Win32
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Debug|x64.ActiveCfg = Debug|x64
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Debug|x64.Build.0 = Debug|x64
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Debug|x86.ActiveCfg = Debug|Win32
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Debug|x86.Build.0 = Debug|Win32
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Release|x64.ActiveCfg = Release|x64
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Release|x64.Build.0 = Release|x64
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Release|x86.ActiveCfg = Release|Win32
+		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
