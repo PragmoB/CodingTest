@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "줄 세우기", "줄 세우
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "세 용액", "세 용액\세 용액.vcxproj", "{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "음악프로그램", "음악프로그램\음악프로그램.vcxproj", "{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Release|x64.Build.0 = Release|x64
 		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Release|x86.ActiveCfg = Release|Win32
 		{A68B46B8-F1CF-4309-8BC6-CEE7A566C66F}.Release|x86.Build.0 = Release|Win32
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Debug|x64.ActiveCfg = Debug|x64
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Debug|x64.Build.0 = Debug|x64
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Debug|x86.ActiveCfg = Debug|Win32
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Debug|x86.Build.0 = Debug|Win32
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Release|x64.ActiveCfg = Release|x64
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Release|x64.Build.0 = Release|x64
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Release|x86.ActiveCfg = Release|Win32
+		{51A65111-3BF0-4BE2-AF14-8DEBD2FA3F12}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
